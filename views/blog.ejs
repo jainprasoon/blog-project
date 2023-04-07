@@ -1,0 +1,30 @@
+<%- include('./header.ejs')  %>
+
+ <!---------blog start-->
+ <section class="blog">
+    <h1 class="text-center" style="color: #386576;;">BLOGS</h1>
+            
+    <div class="container large">
+        <div class="row">
+            
+            <% b.forEach((item)=>{ %>
+                <div class="col-md-4">
+                    <div class="blog-box">
+                        <img src="<%= item.image.url %>" width="350px" height="250px">
+                        <h3><%= item.title %></h3>
+                        <p>28/11/2022</p>
+                        <p><% item.description %> </p>
+                        <a href="/blog-detail/<%= item._id %>" class="btn" style="background-color:#f79d16;color:#ffff">Read More...</a>
+                    </div>
+                </div>
+                
+            <% }) %>
+            
+        </div>
+    </div>
+</section>
+<!------blog end-->	
+
+
+
+<%- include('./footer.ejs')   %>

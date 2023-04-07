@@ -1,0 +1,41 @@
+
+<%- include('./header.ejs')  %>
+<!----contact form start-->
+<div class="container-fluid">
+		
+    <div class="container mb">
+        
+        <div class="row">
+            <h1 class=" mt text-center" style="color: #386756;">
+                <span style="border-bottom: 2px solid #386756;">Do Contact!</span>
+            </h1>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 mt">
+                <form action="/admin/addcontact" class="text-center" method="post">
+                    <input type="text" name="name"  class="form-control mt" placeholder="Name">
+                    <input type="text" name="email"  class="form-control mt" placeholder="Email">
+                    <input type="text" name="phone"  class="form-control mt" placeholder="Phone">
+                    <textarea class="form-control mt" name="message" placeholder="Message"></textarea>
+                    <button class="mt" style="background: #fcc975; color: white; border: 0; padding: 12px 26px;">Send Message</button>
+                </form>
+
+                <div class="col-sm-2"></div>
+            </div>
+            
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+    <!----contactforn end-->
+
+
+
+<%- include('./footer.ejs')   %>

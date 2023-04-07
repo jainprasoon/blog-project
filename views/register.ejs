@@ -1,0 +1,46 @@
+<%- include('./header.ejs')  %>
+<section class="login-wrap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1>REGISTER HERE</h1>
+                    
+                        
+                        <% if(message.length >0){ %>
+                            <div class="alert alert-danger">
+                               <%= message %>
+                            </div>
+                         <% } %>
+                    
+                    <form action="/adminregister" method="post">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" name="name" class="form-control mt-3">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" name="email" class="form-control mt-3">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" id="myInput1" name="password" class="form-control mt-3">
+                        </div>
+                        <!-- <input type = "checkbox" onclick="myFunction1()"><span style="color: #ffff;">Show Password</span> -->
+                        <div class="form-group">
+                            <input type="password" placeholder="Confirm Password" id="myInput" name="confirm_password" class="form-control mt-3">
+                        </div>
+                        <input type="checkbox" onclick="myFunction()"><span style="color: #ffff;">Show Password</span>
+                        <div class="form-group text-center">
+                            <button class="btn btn-info mt-3 form-control mb-3 ">Register</button> 
+                            <span class=" text-center text-white pt-3">HAVE AN ACCOUNT?
+                            <a class="btn reg" href="/login">&nbsp;LOGIN NOW</a></span>
+
+                        </div>
+                    </form>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<%- include('./footer.ejs')   %>

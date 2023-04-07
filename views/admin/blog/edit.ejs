@@ -1,0 +1,48 @@
+<%- include('../../header.ejs')  %>
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+<ul>
+    <li class="active"><a href="/admin/dashboard" class="active">Dashboard</a></li>
+    <li><a href="/admin/blogdisplay">Display Blog</a></li>
+    <li><a href="">Categories</a></li>
+    <li><a href="">Contact</a></li>
+    <li><a href="/admin/aboutdisplay">About</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+</div> 
+
+<div class="col-md-9">
+    <div class="dash-right">
+        <div class="dash-header">
+            <div class="dash-title">
+                <h1 style="color: #386576;">blog update</h1>
+            </div>
+            
+        </div>
+        <form action="/blogupdate/<%= edit._id %>" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="">title</label>
+                <input type="text" class="form-control" name="title" value="<%= edit.title %>">
+            </div>
+            <div class="mb-3">
+                <label for="">description</label>
+                <textarea name="description" class="form-control" id=""><%= edit.description %> </textarea>
+            </div>
+            <div class="md-3">
+                <label for="">upload image</label>
+                <input type="file" name="image" class="form-control">
+              </div>
+              <img src="<%= edit.image.url %>" width="50px" alt="">
+            <button type="sumbit" class="btn btn-info">update</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<%- include('../../footer.ejs')  %>
