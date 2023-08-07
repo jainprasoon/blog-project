@@ -15,7 +15,7 @@ const checkAdminAuth = async (req,res, next) =>{
                    res.redirect("/login")
     }else{
 
-        const data = jwt.verify(token,'prasoonjain123')
+        const data = jwt.verify(token,'prasoon12345')
         console.log(data)
         const admin = await adminmodel.findOne({_id:data.id})
         console.log(admin)
